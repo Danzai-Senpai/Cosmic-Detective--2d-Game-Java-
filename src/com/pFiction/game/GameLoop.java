@@ -33,14 +33,18 @@ public class GameLoop implements Runnable {
 			//Apont valor para a ultima atualização
 			lastUpdate = currentTime;
 			
-			// Laço para fazer a atualização e zerar o acumulador 
-			while (acumullator > updateRate) {
-				update();
-				acumullator = updateRate;
+			if (acumullator>=updateRate) {
+				// Laço para fazer a atualização e zerar o acumulador subtaraindo o updateRate
+				while (acumullator > updateRate) {
+					update();
+					acumullator -= updateRate;
+				}
+			
+				//Quando sair do laço de atualização ocorre a renderização
+				render();
 			}
 			
-			//Quando sair do laço de atualização ocorre a renderização
-			render();
+			
 			
 		}
 		
