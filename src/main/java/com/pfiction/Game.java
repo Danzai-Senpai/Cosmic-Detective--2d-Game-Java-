@@ -1,17 +1,18 @@
 package com.pfiction;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Game { // Codigo base do jogo
     private Display display;
     private List<GameObject> gameObjects;
+    private Input input;
 
     public Game(int width, int height) {
-        display = new Display(width, height); // A informação de Game será implementada usando as configurações do display
-        gameObjects = new ArrayList<>();
-        gameObjects.add(new Square());
+        input = new Input();
+        display = new Display(width, height, input); // A informação de Game será implementada usando as configurações do display
+        gameObjects = new ArrayList<>(); // Criação de um Arraylist para os objetos do jogo
+        gameObjects.add(new Player(new PlayerController(input))); // Chama Player relacionando a ele as informações necessarias a este assim como o adiciona aos objetos do jogo
     }
 
     public void update() {

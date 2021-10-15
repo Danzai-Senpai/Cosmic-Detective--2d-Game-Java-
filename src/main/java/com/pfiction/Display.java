@@ -7,7 +7,7 @@ import java.awt.image.BufferStrategy;
 public class Display extends JFrame { // As configurações do Display que serão implementadas.
     private Canvas canvas;
 
-    public Display (int width, int height) {
+    public Display (int width, int height, Input input) {
         setTitle("Test"); // Nome na parte superior da tela
         setDefaultCloseOperation(EXIT_ON_CLOSE); // Determina que o processo vai ser encerrado após o fechamento da janela
         setResizable(false); // Aponta se o player pode ou não alterar o tamanho da janela
@@ -16,6 +16,7 @@ public class Display extends JFrame { // As configurações do Display que serã
         canvas.setPreferredSize(new Dimension(width, height)); // Aponta o tamanho desejado para a tela
         canvas.setFocusable(false); // Define se assim que iniciado o foco irá para o jogo ou permanecerá na janela anterior.
         add(canvas); // Adiciona as informações ao Canvas(Tela)
+        addKeyListener(input); // Aponta que o KeyListener está relacionado ao JFrame possibilitando passar a resposta deste na tela
         pack(); // Empacota as informações do JFrame a Canvas
 
         canvas.createBufferStrategy(3); // São a quantidade de ups que são renderizados de uma vez para tornar a renderiazação mais fluída
