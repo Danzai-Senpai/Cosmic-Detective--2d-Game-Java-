@@ -31,14 +31,12 @@ public class Display extends JFrame { // As configurações do Display que serã
         graphics.setColor(new Color(40,40,40)); // Camada de cor base criada
         graphics.fillRect(0,0, canvas.getWidth(), canvas.getHeight()); // Aponta o tamanho e forma que será complementada pela cor definida anteriormente
 
-        Rectangle rectangle = game.getRectangle(); // Chama o retangulo que foi determinado em game
-        graphics.setColor(Color.CYAN); // Define uma cor que será implementada
-        graphics.fillRect( // Define o retangulo que virá a ser exibido usando as configurações de x, y, width e height tendo todas essas informações dendo puxadas de
-                (int) rectangle.getX(),
-                (int) rectangle.getY(),
-                (int) rectangle.getWidth(),
-                (int) rectangle.getHeight()
-        );
+        game.getGameObjects().forEach(gameObject -> graphics.drawImage(
+                gameObject.getSprite(),
+                gameObject.getPosition().getX(),
+                gameObject.getPosition().getY(),
+                null
+        )); // Pega GameObjects que irá ser desenhado a cada grafico desenhado (Render de cada Update) que será desenhado na tela
 
         graphics.dispose(); // Faz com que a janela JFrame seja destruida e limpa pelo sistema operacional
         bufferStrategy.show(); // Tem a função de exibir os Buffers na tela
