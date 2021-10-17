@@ -1,4 +1,7 @@
-package com.pfiction;
+package com.pfiction.entity;
+
+import com.pfiction.core.Position;
+import com.pfiction.core.Size;
 
 import java.awt.*;
 

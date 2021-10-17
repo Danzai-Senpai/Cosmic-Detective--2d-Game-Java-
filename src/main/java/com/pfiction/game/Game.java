@@ -1,4 +1,10 @@
-package com.pfiction;
+package com.pfiction.game;
+
+import com.pfiction.display.Display;
+import com.pfiction.input.Input;
+import com.pfiction.controller.PlayerController;
+import com.pfiction.entity.GameObject;
+import com.pfiction.entity.Player;
 
 import java.util.ArrayList;
 import java.util.List;

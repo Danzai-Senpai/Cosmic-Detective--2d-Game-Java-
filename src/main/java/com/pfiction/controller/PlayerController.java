@@ -1,7 +1,8 @@
-package com.pfiction;
+package com.pfiction.controller;
+
+import com.pfiction.input.Input;
 
 import java.awt.event.KeyEvent;
-import java.security.Key;
 
 public class PlayerController implements Controller {
     private Input input;

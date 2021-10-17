@@ -1,4 +1,4 @@
-package com.pfiction;
+package com.pfiction.controller;
 
 public interface Controller {
     // Um boolean para cada tecla

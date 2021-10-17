@@ -1,5 +1,8 @@
 package com.pfiction;
 
+import com.pfiction.game.Game;
+import com.pfiction.game.GameLoop;
+
 public class Launcher { // Iniciará o Jogo
 
     public static void main(String[] args) {

@@ -1,4 +1,8 @@
-package com.pfiction;
+package com.pfiction.entity;
+
+import com.pfiction.controller.Controller;
+import com.pfiction.core.Position;
+import com.pfiction.entity.GameObject;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

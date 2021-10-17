@@ -1,4 +1,6 @@
-package com.pfiction;
+package com.pfiction.game;
+
+import com.pfiction.game.Game;
 
 public class GameLoop implements Runnable { // Loop que o jogo continuará a percorrer para permanecer rodando
 

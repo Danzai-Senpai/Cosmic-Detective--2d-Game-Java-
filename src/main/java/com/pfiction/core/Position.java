@@ -1,4 +1,4 @@
-package com.pfiction;
+package com.pfiction.core;
 
 public class Position {
     private int x;
